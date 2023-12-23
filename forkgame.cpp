@@ -11,13 +11,39 @@ void LimpaTela()
     system("CLS");
 }
 
+string RetornaPalavraAleatoria()
+{
+    string palavras[3] = {"Abacaxi", "Manga", "Morango"};
+
+    int indiceAleatorio = rand() % 2;
+
+    return palavras[indiceAleatorio];
+}
+
+string RetornaPalavraComMascara(string palavra, int TamanhoDaPalavra)
+{
+    int cout = 0;
+    string PalavraComMascara;
+
+    while (cout < TamanhoDaPalavra)
+    {
+        PalavraComMascara += "_";
+        cout++;
+    }
+
+    return PalavraComMascara;
+}
+
 void JogarSozinho()
 {
-    string palavras[3] = ("Abacaxi", "Manga", "Morango");
+    string palavra = RetornaPalavraAleatoria();
 
-    int indiceAleatorio = rand();
+    cout << "A palavra secreta é:" << palavra;
 
-    cout << indiceAleatorio;
+    int TamanhoDaPalavra = palavra.size();
+    
+    string PalavraComMascara = RetornaPalavraComMascara(palavra,TamanhoDaPalavra);
+
 }
 
 void MenuInicial () {
