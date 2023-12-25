@@ -34,15 +34,36 @@ string RetornaPalavraComMascara(string palavra, int TamanhoDaPalavra)
     return PalavraComMascara;
 }
 
+void exibeStatus(string PalavraComMascara, int TamanhoDaPalavra, int tentativasRestantes)
+{
+        cout << "Palavra:" << PalavraComMascara << "(Tamanho:" << TamanhoDaPalavra << ")";
+        cout << "\nTentativas Restantes:" << tentativasRestantes;
+}
+
 void JogarSozinho()
 {
     string palavra = RetornaPalavraAleatoria();
 
-    cout << "A palavra secreta é:" << palavra;
-
     int TamanhoDaPalavra = palavra.size();
     
     string PalavraComMascara = RetornaPalavraComMascara(palavra,TamanhoDaPalavra);
+
+    int tentativas = 0, MaximoDeTentativas = 5;
+    char letra;
+
+    while (MaximoDeTentativas - tentativas > 0)
+    {
+        LimpaTela();
+
+        exibeStatus(PalavraComMascara, TamanhoDaPalavra, MaximoDeTentativas - tentativas);
+        
+        cout << "Digite uma letra:";
+        cin >> letra;
+
+        tentativas++;
+    }
+
+    
 
 }
 
