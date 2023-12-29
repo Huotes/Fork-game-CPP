@@ -13,7 +13,7 @@ void LimpaTela()
 
 string RetornaPalavraAleatoria()
 {
-    string palavras[3] = {"Abacaxi", "Manga", "Morango"};
+    string palavras[3] = {"abacaxi", "manga", "morango"};
 
     int indiceAleatorio = rand() % 2;
 
@@ -49,9 +49,10 @@ void JogarSozinho()
     string PalavraComMascara = RetornaPalavraComMascara(palavra,TamanhoDaPalavra);
 
     int tentativas = 0, MaximoDeTentativas = 5;
+    int cont = 0;
     char letra;
 
-    while (MaximoDeTentativas - tentativas > 0)
+    while (palavra != PalavraComMascara && MaximoDeTentativas - tentativas > 0)
     {
         LimpaTela();
 
@@ -60,10 +61,29 @@ void JogarSozinho()
         cout << "Digite uma letra:";
         cin >> letra;
 
+        for(cont = 0; cont < TamanhoDaPalavra; cont++){
+
+            if (palavra[cont] == letra){
+
+                PalavraComMascara[cont] = palavra[cont];
+
+            }
+        }
+
         tentativas++;
     }
 
-    
+    if (palavra == PalavraComMascara)
+    {
+
+        LimpaTela();
+        cout << "Parabéns, você venceu!";
+    }else
+    {
+
+        LimpaTela();
+        cout << "Você perdeu!";
+    }
 
 }
 
