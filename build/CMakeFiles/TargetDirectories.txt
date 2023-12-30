@@ -1,0 +1,3 @@
+C:/Users/athos/Documents/C Projects/Jogo da forca/build/CMakeFiles/forkgame.dir
+C:/Users/athos/Documents/C Projects/Jogo da forca/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/athos/Documents/C Projects/Jogo da forca/build/CMakeFiles/ZERO_CHECK.dir
