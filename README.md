@@ -22,7 +22,7 @@ The game features an initial menu offering the following options:
 - A C++ compiler to compile and run the code.
 
 ## How to Run
-1. Clone the repository: `git clone https://github.com/Huotes/Fork-game-CPP.git`
+1. Clone the repository: `git clone https://github.com/Huotes/HANGMAN-CPP.git`
 2. Navigate to the game directory: `cd repository-name`
 3. Compile the code: `g++ hangman.cpp -o hangman`
 4. Run the game: `./hangman`
