@@ -42,3 +42,5 @@ jobs:
           echo "build-output-dir=${{ github.workspace }}/build/${{ runner.os }}" >> "$GITHUB_OUTPUT"
       - name: Build
         run: mkdir build && cd build && cmake ..
+      - name: Build
+        run: cmake --build . --config ${{ matrix.build_type }}
