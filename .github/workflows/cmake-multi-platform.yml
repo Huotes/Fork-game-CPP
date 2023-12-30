@@ -43,4 +43,4 @@ jobs:
       - name: Build
         run: mkdir build && cd build && cmake ..
       - name: Build
-        run: cmake --build . --config ${{ matrix.build_type }}
+        run: ls && cmake --build ./build --config ${{ matrix.build_type }}
