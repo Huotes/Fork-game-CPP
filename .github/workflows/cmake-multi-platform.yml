@@ -35,5 +35,10 @@ jobs:
             c_compiler: cl
     steps:
       - uses: actions/checkout@v3
+      - name: Set reusable strings
+        id: strings
+        shell: bash
+        run: |
+          echo "build-output-dir=${{ github.workspace }}/build/${{ runner.os }}" >> "$GITHUB_OUTPUT"
       - name: Build
         run: mkdir build && cd build && cmake ..
